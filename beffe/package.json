@@ -1,0 +1,44 @@
+{
+  "name": "vault-beffe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "start": "export NODE_OPTIONS='--max-http-header-size 50000' && nodemon --watch . --config ./config/nodemon.json",
+    "build": "export NODE_OPTIONS='--max-http-header-size 50000' && tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@actions/core": "^1.9.0",
+    "@grpc/grpc-js": "1.2.3",
+    "@slack/webhook": "^6.1.0",
+    "@types/google-protobuf": "^3.7.4",
+    "@types/uuid": "^8.3.0",
+    "aws-sdk": "^2.1066.0",
+    "axios": "^0.27.2",
+    "body-parser": "1.20.0",
+    "child_process": "^1.0.2",
+    "cors": "^2.8.5",
+    "escape-html": "^1.0.3",
+    "express": "4.18.0",
+    "express-healthcheck": "^0.1.0",
+    "fs": "0.0.1-security",
+    "google-protobuf": "3.11.4",
+    "jwt-decode": "2.2.0",
+    "pg": "^8.5.1",
+    "prom-client": "^12.0.0",
+    "skyflow-node": "^1.6.0",
+    "uuid": "^8.3.2",
+    "winston": "3.3.3"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.8",
+    "@types/express": "^5.0.1",
+    "@types/node": "^14.0.27",
+    "@types/node-fetch": "^2.5.8",
+    "nodemon": "^2.0.20",
+    "ts-node": "8.10.2",
+    "typescript": "3.7.5"
+  }
+}

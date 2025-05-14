@@ -1,0 +1,92 @@
+{
+  "name": "@skyflow/3ds-demo-app",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "homepage": "/demos/3ds",
+  "scripts": {
+    "start": "webpack serve --config ./webpack/webpack.dev.js --open --hot",
+    "build": "webpack --config ./webpack/webpack.prod.js"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "moduleDirectories": [
+      "src",
+      "node_modules"
+    ],
+    "moduleNameMapper": {
+      "\\.(css)$": "<rootDir>/__mocks__/styleMock.js",
+      "\\.(jpg|gif|ttf|eot|svg)$": "<rootDir>/__mocks__/fileMock.js"
+    },
+    "transform": {
+      "^.+\\.(js|jsx)$": "babel-jest",
+      ".+\\.(css|styl|less|sass|scss)$": "<rootDir>/node_modules/jest-css-modules-transform"
+    },
+    "setupTestFrameworkScriptFile": "<rootDir>/setupTests.js",
+    "moduleFileExtensions": [
+      "css",
+      "js",
+      "json",
+      "jsx"
+    ]
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=8",
+    "npm": ">=3"
+  },
+  "dependencies": {
+    "@babel/plugin-transform-react-constant-elements": "7.2.0",
+    "@babel/plugin-transform-react-inline-elements": "7.2.0",
+    "@babel/runtime": "^7.17.9",
+    "@material-ui/core": "^4.10.0",
+    "@material-ui/icons": "^4.2.0",
+    "@skyflow/docs-config": "^1.0.14",
+    "axios": "^0.21.4",
+    "babel-plugin-transform-react-pure-class-to-function": "1.0.1",
+    "babel-plugin-transform-react-remove-prop-types": "0.4.24",
+    "core-js": "^3.22.2",
+    "lodash": "^4.17.21",
+    "notistack": "^0.9.17",
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
+    "react-hot-loader": "4.11.0",
+    "react-router-dom": "^6.27.0",
+    "regenerator-runtime": "^0.13.9",
+    "skyflow-js": "2.1.0",
+    "skyflow-react-js": "2.1.0",
+    "webpack-manifest-plugin": "^4.0.2"
+  },
+  "resolutions": {
+    "babel-core": "7.0.0-bridge.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.13.10",
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "@babel/preset-env": "7.13.10",
+    "@babel/preset-react": "7.12.13",
+    "@babel/runtime-corejs3": "^7.17.9",
+    "@hot-loader/react-dom": "^16.8.6",
+    "babel-loader": "8.2.2",
+    "clean-webpack-plugin": "3.0.0",
+    "connect-history-api-fallback": "1.6.0",
+    "css-loader": "3.0.0",
+    "eslint": "5.16.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-react": "^7.30.0",
+    "file-loader": "4.0.0",
+    "html-webpack-plugin": "5.3.2",
+    "koa-connect": "^2.0.1",
+    "mini-css-extract-plugin": "0.7.0",
+    "style-loader": "^0.23.1",
+    "terser-webpack-plugin": "^5.1.1",
+    "webpack": "^5.75.0",
+    "webpack-bundle-analyzer": "4.4.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-middleware": "^5.3.3",
+    "webpack-dev-server": "^4.8.1",
+    "webpack-hot-middleware": "^2.25.1",
+    "webpack-merge": "5.7.3",
+    "webpack-node-externals": "2.5.2"
+  }
+}

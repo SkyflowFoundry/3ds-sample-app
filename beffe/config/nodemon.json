@@ -1,0 +1,5 @@
+{
+    "watch": ["../beffe"],
+    "ext": "ts",
+    "exec": "ts-node --project config/tsconfig-bff.json index.ts"
+}
