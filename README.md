@@ -87,7 +87,7 @@ npm install
 ```
 
 ### 4. Update properties file
-Update the beffe/utils/properties.ts file to add following values
+Update the frontend/src/utils/properties.js file to add following values
 ```
   VAULT_ID: process.env.VAULT_ID || "", // vault id
   VAULT_URL: process.env.VAULT_URL || "", // vault url
