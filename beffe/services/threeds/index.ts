@@ -7,7 +7,6 @@ const { generateBearerToken, isValid } = require("skyflow-node");
 let tokenObject: any = { accessToken: "" };
 
 export const threeDSAuthenticate = async (req: any, res: any) => {
-  logger.info("3DS Authenticate request received:", req.body);
   try {
     const bearerToken: any = await getSkyflowBearerToken();
     const url = `${properties.VAULT_URL}/v1/3DSAuthenticate`;
@@ -21,6 +20,7 @@ export const threeDSAuthenticate = async (req: any, res: any) => {
       ...req.body,
       guest_checkout: false,
       vault_id: properties.FINTECH_VAULT_ID,
+      preferred_protocol_version:"2.2.0",
       acquirer_details: {
         acquirer_bin: properties.ACQUIRER_BIN,
         acquirer_merchant_id: properties.ACQUIRER_MERCHANT_ID,
