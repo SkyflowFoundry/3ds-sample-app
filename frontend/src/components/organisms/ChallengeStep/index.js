@@ -22,9 +22,8 @@ const ChallengeScreen = () => {
         console.log("Received message from iframe:", e.origin);
         if (e.origin === properties.ORIGIN) {
           if (e.data && e.data.hasOwnProperty("status")) {
-            const iframe = document.getElementById("challengeIframe");
-            if (iframe) {
-              iframe.remove();
+            if (challengeIframe) {
+              challengeIframe.remove();
             }
             if (e.data.status === "SUCCESS") {
               navigate(`${THREE_DS_PAYMENT_SUCCESS_ROUTE}/${transactionId}`);
