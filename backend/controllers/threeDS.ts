@@ -33,6 +33,7 @@ router.post("/3DSAuthenticate", async function (req: any, res: any, next: any) {
   }
 });
 
+//Endpoint to receive cRes from ACS
 router.post(
   "/threeDSRespUrl",
   async function (req: any, res: any, next: any) {
