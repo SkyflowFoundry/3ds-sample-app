@@ -34,7 +34,7 @@ export const threeDSAuthenticate = async (req: any, res: any) => {
       requestor_name: properties.REQUESTOR_NAME,
       requestor_id: properties.REQUESTOR_ID,
       server_trans_id,
-      requestor_final_auth_resp_url: `${properties.ORIGIN}/threeDSRespUrl`,
+      requestor_final_auth_resp_url: properties.THREE_DS_FINAL_AUTH_RESP_URL,
       amount_details: {
         amount: "100",
         purchase_currency: "840",

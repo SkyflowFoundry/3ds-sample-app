@@ -41,7 +41,6 @@
     "@babel/runtime": "^7.17.9",
     "@material-ui/core": "^4.10.0",
     "@material-ui/icons": "^4.2.0",
-    "@skyflow/docs-config": "^1.0.14",
     "axios": "^0.21.4",
     "babel-plugin-transform-react-pure-class-to-function": "1.0.1",
     "babel-plugin-transform-react-remove-prop-types": "0.4.24",
@@ -53,8 +52,8 @@
     "react-hot-loader": "4.11.0",
     "react-router-dom": "^6.27.0",
     "regenerator-runtime": "^0.13.9",
-    "skyflow-js": "2.1.0",
-    "skyflow-react-js": "2.1.0",
+    "skyflow-js": "^2.2.3",
+    "skyflow-react-js": "^2.3.3",
     "webpack-manifest-plugin": "^4.0.2"
   },
   "resolutions": {

@@ -7,7 +7,6 @@ const properties = {
   FINTECH_VAULT_ID:
     process.env.FINTECH_VAULT_ID || "",
   ACCOUNT_ID: process.env.ACCOUNT_ID || "",
-  ORIGIN: process.env.ORIGIN || "",
   ACQUIRER_BIN: process.env.ACQUIRER_BIN || "",
   ACQUIRER_MERCHANT_ID: process.env.ACQUIRER_MERCHANT_ID || "",
   MCC: process.env.MCC || "",
@@ -18,6 +17,7 @@ const properties = {
   MERCHANT_COUNTRY_CODE: process.env.MERCHANT_COUNTRY_CODE || "",
   REQUESTOR_NAME: process.env.REQUESTOR_NAME || "",
   REQUESTOR_ID: process.env.REQUESTOR_ID || "",
+  THREE_DS_FINAL_AUTH_RESP_URL: process.env.THREE_DS_FINAL_AUTH_RESP_URL || "",
 };
 
 export default properties;
