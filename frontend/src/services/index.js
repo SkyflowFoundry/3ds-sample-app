@@ -4,7 +4,7 @@ import properties from "../utils/properties";
 export async function authenticate3DS(data) {
   try {
     const response = await axios.post(
-      `${properties.BEFFE_URL}/3DSAuthenticate`,
+      `${properties.BACKEND_URL}/3DSAuthenticate`,
       data,
       {
         headers: {
@@ -21,7 +21,7 @@ export async function authenticate3DS(data) {
 export const cardLookup = async (bin) => {
   try {
     const response = await axios.post(
-      `${properties.BEFFE_URL}/card_lookup`,
+      `${properties.BACKEND_URL}/card_lookup`,
       { BIN: bin },
       {
         headers: {

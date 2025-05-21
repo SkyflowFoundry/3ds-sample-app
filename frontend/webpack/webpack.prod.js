@@ -110,7 +110,7 @@ module.exports = {
       "process.env": JSON.stringify({
         VAULT_ID: process.env.VAULT_ID,
         VAULT_URL: process.env.VAULT_URL,
-        BEFFE_URL: process.env.BEFFE_URL,
+        BACKEND_URL: process.env.BACKEND_URL,
         ORIGIN: process.env.ORIGIN,
       }),
     }),

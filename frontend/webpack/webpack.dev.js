@@ -1,7 +1,15 @@
 const webpack = require("webpack");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
-
+const dotenv = require("dotenv");
 const commonPaths = require("./paths");
+
+// Get the root path (assuming webpack.config.js is in the root)
+const currentPath = commonPaths.root;
+
+// Load .env file
+const basePath = currentPath + "/.env";
+dotenv.config({ path: basePath })
+
 
 module.exports = {
   mode: "development",
@@ -68,7 +76,7 @@ module.exports = {
   },
   devServer: {
     historyApiFallback: true,
-    port: 8080,
+    port: process.env.PORT || 8080,
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
@@ -80,7 +88,7 @@ module.exports = {
       "process.env": JSON.stringify({
         VAULT_ID: process.env.VAULT_ID,
         VAULT_URL: process.env.VAULT_URL,
-        BEFFE_URL: process.env.BEFFE_URL,
+        BACKEND_URL: process.env.BACKEND_URL,
       }),
     }),
   ],

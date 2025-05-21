@@ -4,7 +4,7 @@ import {
   threeDSAuthenticate,
   cardLookup,
   getSkyflowBearerToken,
-} from "../services/threeds";
+} from "../services/threeDS";
 import { logger } from "../utils/logger";
 
 const router = express.Router();

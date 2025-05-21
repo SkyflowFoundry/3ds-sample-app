@@ -25,7 +25,7 @@ export const getBearerToken = () => {
     };
 
     //token end point
-    const url = `${properties.BEFFE_URL}/authToken`;
+    const url = `${properties.BACKEND_URL}/authToken`;
     Http.open("GET", url, true);
     Http.send();
   });
