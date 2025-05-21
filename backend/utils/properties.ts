@@ -1,4 +1,5 @@
 const properties = {
+  PORT : process.env.PORT || 8000,
   ALLOWED_ORIGIN: process.env.ALLOWED_ORIGIN || "",
   CREDENTIALS_PATH:
     process.env.CREDENTIALS_PATH ||

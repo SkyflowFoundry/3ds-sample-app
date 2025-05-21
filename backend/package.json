@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "start": "export NODE_OPTIONS='--max-http-header-size 50000' && nodemon --watch . --config ./config/nodemon.json",
+    "start": "export NODE_OPTIONS='--max-http-header-size 50000' && dotenv -e .env -- nodemon --watch . --config ./config/nodemon.json",
     "build": "export NODE_OPTIONS='--max-http-header-size 50000' && tsc"
   },
   "author": "",
@@ -37,6 +37,7 @@
     "@types/express": "^5.0.1",
     "@types/node": "^14.0.27",
     "@types/node-fetch": "^2.5.8",
+    "dotenv-cli": "^8.0.0",
     "nodemon": "^2.0.20",
     "ts-node": "8.10.2",
     "typescript": "3.7.5"

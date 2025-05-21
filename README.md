@@ -9,53 +9,38 @@ Included are some basic build and run scripts you can use to start up the applic
 
 # Steps for starting the sample app
 ## Pre-requisite
- - node version 14
+ - node version equal or greater than 14
 
-## Steps to start beffe
+## Steps to start backend
 
-### 1. Switch directory to beffe
+### 1. Switch directory to backend
 ```
-cd beffe
+cd backend
 ```
 
-### 2. Setup npm registry
- - set the npm registry to prekarilabs
-```
-npm set registry https://prekarilabs.jfrog.io/prekarilabs/api/npm/npm/
-```
- - login to npm
-```
-npm login
-```
- - login using credentials
-
-### 3. Install dependencies
+### 2. Install dependencies
 ```
 npm install
 ```
 
-### 4. Update properties file
-Update the beffe/utils/properties.ts file to add following values
+### 3. Add environment
+Update the backend/.env file to add following values
 ```
-  ALLOWED_ORIGIN: process.env.ALLOWED_ORIGIN || "", // origins to be allowed, * in case of localhost
-  CREDENTIALS_PATH:
-    process.env.CREDENTIALS_PATH ||
-    "", // path to credentials file for service account
-  VAULT_URL: process.env.VAULT_URL || "", // vault url
-  FINTECH_VAULT_ID:
-    process.env.FINTECH_VAULT_ID || "", // vault id
-  ACCOUNT_ID: process.env.ACCOUNT_ID || "", // account id
-  ORIGIN: process.env.ORIGIN || "", // url of running beffe
-  ACQUIRER_BIN: process.env.ACQUIRER_BIN || "",
-  ACQUIRER_MERCHANT_ID: process.env.ACQUIRER_MERCHANT_ID || "",
-  MCC: process.env.MCC || "",
-  MERCHANT_NAME: process.env.MERCHANT_NAME || "",
-  MERCHANT_URL:
-    process.env.MERCHANT_URL ||
-    "",
-  MERCHANT_COUNTRY_CODE: process.env.MERCHANT_COUNTRY_CODE || "",
-  REQUESTOR_NAME: process.env.REQUESTOR_NAME || "",
-  REQUESTOR_ID: process.env.REQUESTOR_ID || "",
+PORT=
+ALLOWED_ORIGIN=
+CREDENTIALS_PATH=
+VAULT_URL=
+FINTECH_VAULT_ID=
+ACCOUNT_ID=
+ACQUIRER_BIN=
+ACQUIRER_MERCHANT_ID=
+MCC=
+MERCHANT_NAME=
+MERCHANT_URL=
+MERCHANT_COUNTRY_CODE=
+REQUESTOR_NAME=
+REQUESTOR_ID=
+THREE_DS_FINAL_AUTH_RESP_URL=
 ```
 
 ### 4. Start the server
@@ -70,29 +55,19 @@ npm start
 cd frontend
 ```
 
-### 2. Setup npm registry
- - set the npm registry to prekarilabs
-```
-npm set registry https://prekarilabs.jfrog.io/prekarilabs/api/npm/npm/
-```
- - login to npm
-```
-npm login
-```
- - login using credentials
-
-### 3. Install dependencies
+### 2. Install dependencies
 ```
 npm install
 ```
 
-### 4. Update properties file
-Update the frontend/src/utils/properties.js file to add following values
+### 3. Add environment variables
+Update the frontend/.env file to add following values
 ```
-  VAULT_ID: process.env.VAULT_ID || "", // vault id
-  VAULT_URL: process.env.VAULT_URL || "", // vault url
-  BEFFE_URL: process.env.BEFFE_URL || "", // url of running beffe
-  ORIGIN: process.env.ORIGIN || "", // url of running beffe
+PORT=
+VAULT_ID=
+VAULT_URL=
+BACKEND_URL=
+ORIGIN=
 ```
 
 ### 4. Start the server

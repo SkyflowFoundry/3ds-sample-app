@@ -1,4 +1,4 @@
-import threeDSRouter from "./controllers/threeds";
+import threeDSRouter from "./controllers/threeDS";
 import properties from "./utils/properties";
 import path from "path";
 import express from "express";
@@ -33,8 +33,8 @@ app.use(
 app.use(threeDSRouter);
 
 
-app.listen(8000, () => {
-  console.log(`Server is running on http://localhost:8000`);
+app.listen(properties.PORT, () => {
+  console.log(`Server is running on http://localhost:${properties.PORT}`);
 })
 
 export default app
